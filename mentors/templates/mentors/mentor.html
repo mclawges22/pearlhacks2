@@ -1,0 +1,211 @@
+<!--mentors/templates/mentors/mentor.html -->
+
+{% extends "base.html" %}
+
+{% block css %}<link href="{{ STATIC_URL }}css/mentor.css" rel="stylesheet">{% endblock %}
+
+{% block content %}
+<header class="desktop">
+		<a href="../">
+			<div class="home">
+			<img src="{{ STATIC_URL }}img/pearls.png"><h4>Pearl Hacks</h4>
+		</div></a>
+		<div class="mobile">
+			<div class="m-nav">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+			</div>
+			<div class="m-name">{{Mentor.nameFirst}} {{Mentor.nameLast}}
+			</div>
+			<a class="m-next-url" href=""><div class="m-next">
+					<div class="arrow-right"></div>
+			</div></a>
+			
+		</div>
+		<a href="{{ STATIC_URL }}img/PearlHacks_schedule.png" target="_blank">
+			<div class="schedule nav">Schedule
+		</div></a>
+		<a href="./">
+			<div class="mentors nav">Mentors
+		</div></a>
+		<a href="http://twitter.com/PearlHacks" target="_blank"><div class="twitter nav">Twitter
+		</div></a>
+		<a href="http://www.google.com/maps/place/201+S+Columbia+St/@35.9100567,-79.0534695,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e625b4312d:0x29f902806bb95f61" target="_blank"><div class="directions nav">Directions
+		</div></a>
+
+	</header>
+
+	<div class="row">
+		<a class="back-url" href=""><div class="back">
+					<div class="arrow-left"></div>
+			</div></a>
+		<a class="next-url" href=""><div class="next">
+					<div class="arrow-right"></div>
+			</div></a>
+		
+		<div class="col-md-5 col-sm-5 col-xs-6 body-col photo">
+
+			<img class="portrait" src="{{ Mentor.photoUrl }}">
+			<div class="contact-logos">
+				<a id="website_link" href="" target="_blank"><img id="website" src="http://pearlhacks.com/mentors/link_circle.png"></a>
+				<a id="twitter_link" href="" target="_blank"><img id="twitter"src="http://pearlhacks.com/mentors/twitter_circle.png"></a>
+				<a id="github_link" href="" target="_blank"><img id="github"src="http://pearlhacks.com/mentors/github_circle.png"></a>
+				<a id="linkedIn_link" href="" target="_blank"><img id="linkedIn"src="http://pearlhacks.com/mentors/linkedIn_circle.png"></a>
+			</div>
+			<a href="{{Mentor.companyUrl}}" target="_blank"><img class="m-company-logo" src="{{ Mentor.companyImgUrl}}"></a>
+			
+		</div>
+
+		<div class="col-md-7 col-sm-7 col-xs-6 body-col info">
+			<div class="name">
+				<h2>{{Mentor.nameFirst}} {{Mentor.nameLast}}</h2>
+				
+			</div>
+			<a href="{{Mentor.companyUrl}}" target="_blank"><img class="company-logo" src="{{ Mentor.companyImgUrl}}"></a>
+			<div class="profile-blurb" id="about">
+				<h3 class="colored">About</h3>
+				<p>{{Mentor.about}}</p>
+
+			</div>
+			
+			<div class="profile-blurb" id="skills">
+				<h3 class="colored">Skills</h3>
+				<ul class="skillsList"> 
+					{% for skill in Mentor.skills.all %} 
+						<li>{{skill.description}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			
+			<div class="profile-blurb" id="allWomen">
+				<h3 class="colored">Something you wish you could say to all women?</h3>
+				<p><em>"</em> {{Mentor.allWomen}} <em>"</em></p>
+			</div>
+			<div class="profile-blurb" id="proud">
+				<h3 class="colored">What are you most proud of?</h3>
+				<p><em>"</em> {{Mentor.proud}} <em>"</em></p>
+			</div>
+			<div class="profile-blurb" id="afraid">
+				<h3 class="colored">What would you do if you weren't afraid?</h3>
+				<p><em>"</em> {{Mentor.afraid}} <em>"</em></p>
+			</div>
+		</div>
+	</div>
+<script>
+	$( document ).ready(function() {
+		//$(".col-md-8").css("height", h);
+		if ($(window).width() < 800 ) {
+			$(".nav").hide();
+			$(".back").hide();
+			$(".next").hide();
+			//wh = $( window ).height();
+			//console.log(wh);
+			//$(".register").css("top", wh-40);
+		}
+		$(".colored").css("color","{{Mentor.hexCode}}");
+		forwardback();
+		checkContent();
+		checkContactInfo();
+	});
+
+	$( window ).resize(function() {
+
+		if ($(window).width() < 800 ) {
+			$(".nav").hide();
+			$(".back").hide();
+			$(".next").hide();
+			//wh = $( window ).height();
+			//$(".register").css("top", wh-40);
+		}
+		else {
+			$(".nav").show();
+			$(".back").show();
+			$(".next").show();
+			//$(".register").css("top", 20);
+		}
+		
+	});
+
+	$(".m-nav").on("click", function() {
+			$(".nav").toggle();
+	});
+
+	function forwardback() {
+		url = document.URL;
+		urlSplit = url.split("/");
+		mentor_pk = parseInt(urlSplit[urlSplit.length-1]);
+		if (mentor_pk == 23) {
+			$(".next-url").attr("href", 1);
+			$(".m-next-url").attr("href", 1);
+			$(".back-url").attr("href", mentor_pk-1);
+		}
+		else if (mentor_pk == 1) {
+			$(".next-url").attr("href", mentor_pk+1);
+			$(".m-next-url").attr("href", mentor_pk+1);
+			$(".back-url").attr("href", 23);
+		}
+		else {
+			$(".next-url").attr("href", mentor_pk+1);
+			$(".m-next-url").attr("href", mentor_pk+1);
+			$(".back-url").attr("href", mentor_pk-1);
+		}
+	}
+	function checkContent() {
+		if ("{{Mentor.photoUrl}}" == "") {
+			$(".info").addClass("info-across");
+			$(".photo").hide();
+
+		}
+		if ("{{Mentor.about}}" == "") {
+			console.log("no about");
+			$("#about").hide();
+			$("#skills").addClass("no-about");
+		}
+		if ("{{Mentor.allWomen}}" == "") {
+			$("#allWomen").hide();
+		}
+		if ("{{Mentor.proud}}" == "") {
+			$("#proud").hide();
+		}
+		if ("{{Mentor.afraid}}" == "") {
+			$("#afraid").hide();
+		}
+	}
+	function checkContactInfo() {
+		//if they entered a website then we link to it, else hide icon
+		if ("{{Mentor.website}}" == "") {
+			if ("{{Mentor.linkOther}}" == "") {
+				$("#website").hide();
+			}
+			else {
+				$("#website_link").attr("href", "{{Mentor.linkOther}}");
+			}
+		}
+		else {
+			$("#website_link").attr("href", "{{Mentor.website}}");
+		}
+		// Twitter
+		if ("{{Mentor.twitter}}" == "") {
+			$("#twitter").hide();
+		}
+		else {
+			$("#twitter_link").attr("href", "{{Mentor.twitter}}");
+		}
+		// GitHub
+		if ("{{Mentor.gitHub}}" == "") {
+			$("#github").hide();
+		}
+		else {
+			$("#github_link").attr("href", "{{Mentor.gitHub}}");
+		}
+		// LinkedIn
+		if ("{{Mentor.linkedIn}}" == "") {
+			$("#linkedIn").hide();
+		}
+		else {
+			$("#linkedIn_link").attr("href", "{{Mentor.linkedIn}}");
+		}
+	}
+	</script>
+{% endblock %}

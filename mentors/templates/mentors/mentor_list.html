@@ -1,0 +1,252 @@
+<!-- mentors/templates/mentors/mentor_list.html -->
+{% extends "base.html" %}
+
+{% block css %}<link href="{{ STATIC_URL }}css/mentors.css" rel="stylesheet">{% endblock %}
+
+{% block content %}
+	<header class="desktop">
+		<a href="../">
+			<div class="home">
+			<img src="{{ STATIC_URL }}img/pearls.png"><h4>Pearl Hacks</h4>
+		</div></a>
+		<div class="mobile">
+			<div class="m-nav">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+			</div>
+			<div class="show-companies">view company
+			</div>
+			<div class="show-skills">
+				or skill
+			</div>
+		</div>
+		<a href="{{ STATIC_URL }}img/PearlHacks_schedule.png" target="_blank">
+			<div class="schedule nav">Schedule
+		</div></a>
+		<a href="#">
+			<div class="mentors nav">Mentors
+		</div></a>
+		<a href="http://twitter.com/PearlHacks" target="_blank"><div class="twitter nav">Twitter
+		</div></a>
+		<a href="http://www.google.com/maps/place/201+S+Columbia+St/@35.9100567,-79.0534695,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e625b4312d:0x29f902806bb95f61" target="_blank"><div class="directions nav">Directions
+		</div></a>
+
+	</header>
+	<div class="row">
+		<div class="col-md-4 col-sm-4 skills">
+			<h5>Search Mentors by Skill</h5>
+			<ul>
+				<!-- attempt at Django skills model
+				{% for skill in skills %}
+				{# Each "skill" is a skill model object. #}
+					<li id="{{ skill.pk }}">{{ skill.description }}</li>
+				{% endfor %} -->
+				<li id="all">All</li>
+				<li id="basicWeb">HTML, CSS, JavaScript, JQuery</li>
+				<li id="complexWeb">Advanced Web - PHP,  MySQL, etc.</li>
+				<li id="python">Python</li>
+				<li id="rubyRails">Ruby on Rails</li>
+				<li id="django">Django</li>
+				<li id="mobile">Mobile app development</li>
+				<li id="hardware">Hardware - micro-controllers, etc.</li>
+ 				<li id="java">Java</li>
+ 				<li id="CC">C or C++</li>
+ 				<li id="linux">Linux - Ubuntu, etc.</li>
+ 				<li id="ai">Artificial Intelligence / Machine Learning</li>
+				<li id="security">Security</li>
+ 				<li id="ux">User Experience/Interface Design</li>
+ 				<li id="pm">Product Management</li>
+ 				<li id="aws">Amazon Web Services</li>
+ 			</ul>
+
+		</div>
+		<div class="col-md-8">
+			<a href="https://docs.google.com/forms/d/1F57Hi570LQ4NgKBu9wcYbDsEgotGGdJa7C2h9o73hvA/viewform" target="_blank"><h4 class="register">Request a Mentor</h4></a>
+			<ul class="mentor-list all">
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/google.png">
+					<a href="6">Baris Yuksel</a><br>
+					<a href="#">Carson Holgate</a><br>
+					<a href="#">Lettie Malan</a><br>
+					<a href="#">Kat Leung</a>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/palantir.png" style="padding-top:23px;padding-bottom:25px">
+					<a href="#">Mentor 1</a><br>
+					<a href="#">Mentor 2</a><br>
+					<a href="#">Mentor 3</a>
+				</li>
+				
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/rhl.png" style="padding-top:20px">
+					<a href="7">Gina Likins</a><br>
+					<a href="10">Cas Roberts</a>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/sparkfun.png" style="padding-bottom:10px;">
+					<a href="19">Allison Cavis</a><br>
+					<a href="20">Jenny Lindberg</a><br>
+					<a href="#">Dia Campbell</a>
+				</li>
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/capitalone.png">
+					<a href="14">Tanvi Thakur</a><br>
+					<a href="15">Shaun Webb</a>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/epic.png" style="padding-top:23px;padding-bottom:20px">
+					<a href="#">Mentor 1</a>
+				</li>
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/femgineer.png" style="padding-top:13px">
+					<a href="13">Poornima Vijayashanker</a>
+				</li>
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/ei_logo.png">
+					<a href="2">Tom Byrne</a>
+				</li>
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/square-logo-black.png" style="padding-bottom:10px">
+					<a href="1">Kat Hawthorne</a>
+				</li>
+				<li>
+					<img class="logo" src="http://www.pearlhacks.com/sponsor_logos/Willowtree.jpg" style="padding-top:20px;padding-bottom:17px">
+					<a href="8">Novall Khan</a>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/caktus.png" style="padding-top:3px;padding-bottom:17px">
+					<a href="#">Rebecca Lovewell</a>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/RV_Logo.png" style="padding-top:23px;padding-bottom:25px">
+					<a href="#">Mentor 1</a><br>
+					<a href="#">Mentor 2</a><br>
+					<a href="#">Mentor 3</a><br><br><br><br>
+				</li>
+				<li>
+					<img class="logo" src="http://pearlhacks.com/sponsor_logos/MongoDB.png" style="padding-top:23px;padding-bottom:25px">
+					<a href="22">Amalia Hawkins</a><br><br><br><br>
+				</li>
+				<li>
+					<h3>Other Mentors</h3><br>
+					<a href="5">Emily Chow</a><br>
+					<a href="4">Julia Elman</a><br>
+					<a href="9">Tamara Berg</a><br>
+					<a href="11">Leonel Galan</a><br>
+					<a href="12">Linda Nichols</a><br>
+					<a href="16">Jeanne Hiesel</a><br>
+					<a href="17">Steven King</a><br>
+					<a href="18">Jeff Hilnbrand</a><br>
+					<a href="21">Stanley Zheng</a><br>
+					<a href="23">Mercedes Gosby</a><br>
+					<a href="3">Bridget Hillyer</a><br><br><br><br>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+<script>
+	$( document ).ready(function() {
+		h = $( ".skills" ).height();
+		$(".col-md-8").css("height", h);
+	
+		for (var i=0; i<skillList.length; i++) {
+			$(".col-md-8").append('<ul class="search_list '+skillList[i]+'List"><h2>'+skillDescription[i]+'</h2></ul>');
+		}
+		generateSkillLists();
+		for (var j=0; j<skillList.length; j++) {
+			handleSkillList(j);
+			}
+		if ($(window).width() < 800 ) {
+			$(".nav").hide();
+			wh = $( window ).height();
+			console.log(wh);
+			$(".register").css("top", wh-40);
+		}
+		$(".search_list").hide();
+
+	});
+
+	$( window ).resize(function() {
+		if ($(window).width() < 800 ) {
+			$(".nav").hide();
+			wh = $( window ).height();
+			$(".register").css("top", wh-40);
+		}
+		else {
+			$(".nav").show();
+			$(".register").css("top", 20);
+		}
+		
+	});
+
+	var skillList = ["basicWeb", "complexWeb", "python", "rubyRails",
+		"django", "mobile", "hardware", "java", "CC", "linux", "ai", "security", "ux", "pm", "aws"];
+	var skillDescription = ["HTML, CSS, JavaScript, JQuery", 
+		"Advanced web dev (PHP, MySQL, web libraries and platforms)", "Python", "Ruby on Rails", 
+		"Django", "Mobile app development", "Hardware hacking - <br>micro-controllers, wearable electronics, etc...", "Java", 
+		"C or C++", "Linux / Ubuntu", "Artificial Intelligence and Machine Learning", "Security", "User Experience / Interaction Design", "Program/Product Management", "Amazon Web Services"];
+
+	function handleSkillList(i) {
+		document.getElementById(skillList[i]).onclick = (function() {
+			$(".all").hide();
+			console.log(skillList[i]);
+			$(".search_list").hide();
+			$("."+skillList[i]+"List").show();
+			console.log("."+skillList[i]+"List");
+		});
+	}
+	$(".show-skills").on("click", function() {
+		$(".all").hide();
+		$(".search_list").show();
+
+	})
+	$(".show-companies").on("click", function() {
+		$(".all").show();
+		$(".search_list").hide();
+
+	})
+	$("#all").on("click", function() {
+		$(".all").show();
+		$(".search_list").hide();
+
+	})
+	$(".m-nav").on("click", function() {
+			$(".nav").toggle();
+	});
+	function toggleSkills(i) {
+		$(h1).on("click", function() {
+			$(".basicWeb").toggle();
+		})
+	}
+	function generateSkillLists() {
+
+		{% for mentor in mentors %}
+			
+			{% for skill in mentor.skills.all %} 
+				m = "{{ skill.name }}";
+				
+				$("."+m+"List").append(generateListHTML('{{mentor.pk}}', 
+						"{{ mentor.nameFirst }} {{ mentor.nameLast }}", "{{mentor.twitter }}"));
+				
+			{% endfor %}
+
+		{% endfor %}
+		
+	}
+	function generateListHTML(pk, name, twitter) {
+			HTML="";
+			twitterHandle = twitter.slice(19);
+			HTML += '<li>- <a class="name" href="'+pk+'">'+name+'</a>';
+			if (twitterHandle != "") {
+				HTML += ', <a class="twitter-handle" href="'+
+					twitter+'">@'+twitterHandle+'</a>';
+			}
+			HTML +='</li>';
+			return HTML;
+		}
+</script>
+
+{% endblock %}

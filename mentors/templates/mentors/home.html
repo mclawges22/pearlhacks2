@@ -1,0 +1,35 @@
+<!--mentors/templates/mentors/home.html -->
+
+{% extends "base.html"%}
+{% load humanize %}
+{% block css %}<link href="{{ STATIC_URL }}css/home.css" rel="stylesheet">{% endblock %}
+{% block content %}
+	
+	<div class="row">
+		<div class="logo">
+			<img src="{{ STATIC_URL }}img/Pearl_Hacks_top.png" width="73%">
+			<img src="{{ STATIC_URL }}img/Pearl_Hacks_bottom.png" width="73%">
+		</div>
+		<div class="home-menu">
+			<a href="{{ STATIC_URL }}img/PearlHacks_schedule.png" target="_blank">
+				<div class="red rectangle">
+				<h1>Schedule</h1>
+				</div></a>
+			<a href="mentor">
+				<div class="yellow rectangle">
+					<h1>Mentors</h1>
+				</div></a>
+			<a href="http://twitter.com/pearlhacks" target="_blank">
+				<div class="blue rectangle">
+					<h1>Twitter</h1>
+				</div></a>
+		<a href="https://www.google.com/maps/place/201+S+Columbia+St/@35.9100567,-79.0534695,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e625b4312d:0x29f902806bb95f61" target="_blank">
+			<div class="green rectangle">
+				<h1>Directions</h1>
+			</div>
+		</a>
+		<div>
+				<img src="{{ STATIC_URL }}img/Sitterson.png" width="100%">
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+[
+    {
+        "pk":1,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"basicWeb",
+            "description":"HTML/CSS/JavaScript/JQuery"
+        }
+    },
+    {
+        "pk":2,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"complexWeb",
+            "description":"Advanced web dev (PHP, MySQL, web libraries and platforms)"
+        }
+    },
+    {
+        "pk":3,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"python",
+            "description":"Python"
+        }
+    },
+    {
+        "pk":4,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"rubyRails",
+            "description":"Ruby on Rails"
+        }
+    },
+    {
+        "pk":5,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"django",
+            "description":"Django"
+        }
+    },
+    {
+        "pk":6,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"mobile",
+            "description":"Mobile app development"
+        }
+    },
+    {
+        "pk":7,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"hardware",
+            "description":"Hardware hacking - micro-controllers, wearable electronics, etc..."
+        }
+    },
+    {
+        "pk":8,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"java",
+            "description":"Java"
+        }
+    },
+    {
+        "pk":9,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"CC",
+            "description":"C or C++"
+        }
+    },
+    {
+        "pk":10,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"linux",
+            "description":"Linux / Ubuntu"
+        }
+    },
+    {
+        "pk":11,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"ai",
+            "description":"Artificial Intelligence and Machine Learning"
+        }
+    },
+    {
+        "pk":12,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"security",
+            "description":"Security"
+        }
+    }, 
+    {
+        "pk":13,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"games",
+            "description":"Game development and design"
+        }
+    },  
+    {
+        "pk":14,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"ux",
+            "description":"User Experience / Interaction Design"
+        }
+    }, 
+    {
+        "pk":15,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"pm",
+            "description":"Program/Product Management"
+        }
+    }, 
+    {
+        "pk":16,
+        "model":"mentors.Skill",
+        "fields": {
+            "name":"aws",
+            "description":"Amazon Web Services"
+        }
+    }
+]

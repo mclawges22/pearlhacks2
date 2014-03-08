@@ -1,0 +1,17 @@
+<!-- mentors/templates/mentors/skill_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+	<h2>Pearl Hacks mentors have experience with:</h2>
+	<ul>
+	{% for skill in skills %}
+	{# Each "skill" is a skill model object. #}
+	<li><a href="{{ skill.id }}">{{ skill.name }}</a> | {{ skill.description }}
+
+<!-- how do I print the list of mentors with this skill? -->
+
+	</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

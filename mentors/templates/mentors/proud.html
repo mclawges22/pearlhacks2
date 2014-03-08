@@ -1,0 +1,41 @@
+<!--mentors/templates/mentors/proud.html -->
+
+{% extends "base.html" %}
+
+{% block css %}<link href="{{ STATIC_URL }}css/random.css" rel="stylesheet">{% endblock %}
+
+{% block content %}
+<div class="l-arrow-bg"><div class="arrow-left"></div></div>
+<a href="../"><img id="home" src="{{ STATIC_URL }}img/pearls.png"></a><div class="r-arrow-bg"><div class="arrow-right"></div></div>
+<h1>What are you most proud of?</h1>
+
+<div class="row">
+	
+
+	<div class="col-md-11 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12">
+		<h4 class="quote"><strong>"</strong> {{ Mentor.proud }} <strong>"</strong></h4>
+		<h3>- <a href="{{ Mentor.nameFirst|lower }}">{{ Mentor.nameFirst }} {{ Mentor.nameLast }}</a>, {{ Mentor.company }}</h3>
+	</div>
+	
+</div>
+<script>
+	$( document ).ready(function() {
+		backgroundColor = "{{ Mentor.hexCode }}";
+		highlightColor = "{{ Mentor.highlight }}";
+		$("body").css("background-color", backgroundColor);
+		$("body").css("color", highlightColor);
+		$("a").css("color", highlightColor);
+		console.log(backgroundColor);
+
+		if ("{{ Mentor.afraid}}" == "") {
+			location.reload();
+		}
+		$(".l-arrow-bg").on("click", function() {
+			location.reload();
+		})
+		$(".r-arrow-bg").on("click", function() {
+			location.reload();
+		})
+	});
+</script>
+{% endblock %}

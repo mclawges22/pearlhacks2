@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>{% block title %}Pearl Hacks{% endblock %}</title>
+	<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+	<style>@font-face{font-family:LMP;src:url('{{ STATIC_URL }}fonts/LittleMissPriss.ttf');}</style>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500' rel='stylesheet' type='text/css'>
+	{% block css %}{% endblock %}
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		{% block menu %}{% endblock %}
+		{% block content %}{% endblock %}
+	</div>
+
+</body>
+</html>

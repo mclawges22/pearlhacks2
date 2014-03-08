@@ -1,0 +1,24 @@
+<!--mentors/templates/mentors/menu.html -->
+
+{% extends "base.html"%}
+{% load humanize %}
+{% block menu %}
+	<header class="desktop">
+		<a href="../">
+			<div class="home">
+			<img src="{{ STATIC_URL }}img/pearls.png"><h4>Pearl Hacks</h4>
+		</div></a>
+		<a href="{{ STATIC_URL }}img/PearlHacks_schedule">
+			<div class="schedule nav">Schedule
+		</div></a>
+		<a href="#">
+			<div class="mentors nav">Mentors
+		</div></a>
+		<a href="http://twitter.com/PearlHacks"><div class="twitter nav">Twitter
+		</div></a>
+		<a href="http://www.google.com/maps/place/201+S+Columbia+St/@35.9100567,-79.0534695,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e625b4312d:0x29f902806bb95f61" target="_blank"><div class="directions nav">Directions
+		</div></a>
+
+	</header>
+{% endblock %}
+{% block content %}{% endblock %}

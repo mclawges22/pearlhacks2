@@ -916,5 +916,39 @@
             "proud":"Professionally, I'm still honing my skills and still have much to learn, in my opinion. :) Personally, I'm proud of my family and the encouraging support they've always given me."           
         }
     },
+    {
+        "pk":6,
+        "model":"mentors.Mentor",
+        "fields": {
+            "nameFirst":"Baris",
+            "nameLast":"Yuksel",
+            "email":"barisyuksel@google.com",
+            "company":"Google",
+            "companyUrl":"http://www.google.com/about/",
+            "companyImgUrl":"http://pearlhacks.com/sponsor_logos/google.png",
+            "linkedIn":"http://www.linkedin.com/pub/baris-yuksel/1/bb1/998",
+            "twitter":"http://twitter.com/baris_wonders",
+            "gitHub":"",
+            "website":"http://barisyuksel.com",
+            "linkOther":"",
+            "skills":[1,2,3,5,6,7,8,9,10,11],
+            "skillsOther":"",           
+            "techTalk":true,
+            "judge":true,
+            "mentor":true,
+            "language":"Python",
+            "languageUrl":"http://python.org",
+            "almaMater":"MIT",
+            "photoUrl":"http://pearlhacks.com/mentors/Baris.png",
+            "allWomen":"The struggle for a better tomorrow is futile without strong women.",
+            "afraid":"Sail more. I know my sailing skills are not very good, so I get scared taking the responsibility of a whole boat. That said, also I'd be more mobile in the world.",
+            "color":"Purple, Black/Red mix",
+            "hexCode":"#000",
+            "highlight":"#D42300",
+            "about":"I'm curious and excited to live.",
+            "hobbies":"Cooking",
+            "proud":"Having the opportunity to have witnessed the difference Computer Science can make in people's lives for a better quality of living across the globe. Also, my friends :)"           
+        }
+    }
     
 ]

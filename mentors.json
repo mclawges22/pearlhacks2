@@ -170,40 +170,6 @@
         }
     },   
     {
-        "pk":6,
-        "model":"mentors.Mentor",
-        "fields": {
-            "nameFirst":"Baris",
-            "nameLast":"Yuksel",
-            "email":"barisyuksel@google.com",
-            "company":"Google",
-            "companyUrl":"http://www.google.com/about/",
-            "companyImgUrl":"http://pearlhacks.com/sponsor_logos/google.png",
-            "linkedIn":"http://www.linkedin.com/pub/baris-yuksel/1/bb1/998",
-            "twitter":"http://twitter.com/baris_wonders",
-            "gitHub":"",
-            "website":"http://barisyuksel.com",
-            "linkOther":"",
-            "skills":[1,2,3,5,6,7,8,9,10,11],
-            "skillsOther":"",           
-            "techTalk":true,
-            "judge":true,
-            "mentor":true,
-            "language":"Python",
-            "languageUrl":"http://python.org",
-            "almaMater":"MIT",
-            "photoUrl":"http://pearlhacks.com/mentors/Baris.png",
-            "allWomen":"The struggle for a better tomorrow is futile without strong women.",
-            "afraid":"Sail more. I know my sailing skills are not very good, so I get scared taking the responsibility of a whole boat. That said, also I'd be more mobile in the world.",
-            "color":"Purple, Black/Red mix",
-            "hexCode":"#000",
-            "highlight":"#D42300",
-            "about":"I'm curious and excited to live.",
-            "hobbies":"Cooking",
-            "proud":"Having the opportunity to have witnessed the difference Computer Science can make in people's lives for a better quality of living across the globe. Also, my friends :)"           
-        }
-    },
-    {
         "pk":7,
         "model":"mentors.Mentor",
         "fields": {
@@ -950,5 +916,38 @@
             "proud":"Professionally, I'm still honing my skills and still have much to learn, in my opinion. :) Personally, I'm proud of my family and the encouraging support they've always given me."           
         }
     },
-    
+    {
+        "pk":29,
+        "model":"mentors.Mentor",
+        "fields": {
+            "nameFirst":"Erica",
+            "nameLast":"Stringfellow",
+            "email":"patricia.shin@willowtreeapps.com",
+            "company":"Willow Tree Apps",
+            "companyUrl":"http://www.willowtreeapps.com",
+            "companyImgUrl":"http://pearlhacks.com/sponsor_logos/willowTree.png",
+            "linkedIn":"http://www.linkedin.com/in/pattishin",
+            "twitter":"https://twitter.com/pattishin",
+            "gitHub":"",
+            "website":"",
+            "linkOther":"",
+            "skills":[1,2,6,14],
+            "skillsOther":"",           
+            "techTalk":false,
+            "judge":true,
+            "mentor":true,
+            "language":"Java",
+            "languageUrl":"http://www.oracle.com/technetwork/java/index.html",
+            "almaMater":"N.C. State University",
+            "photoUrl":"https://s.gravatar.com/avatar/5f70ddd655ef4254fa72cf3c76ebaafe?s=80",
+            "allWomen":"\"Be strong and courageous. Do not be terrified; do not be discouraged, for the Lord your God will be with you wherever you go.\" [Joshua 1:9] \"We all have our own life to pursue, our own kind of dream to be weaving, and we all have the power to make wishes come true, as long as we keep believing.\" [Louisa May Alcott] \"Failures are finger posts on the road to achievement.\" [C.S. Lewis]",
+            "afraid":"I'd try skydiving. Relocating is scary too... but I already did that.",
+            "color":"Navy Blue",
+            "hexCode":"#162252",
+            "highlight":"#fff",
+            "about":"My hometown is Chapel Hill, NC. I'm definitely a RTP kid. I have lived in Durham, Chapel Hill, and Raleigh at some point in my life. I graduated with a BS degree in Computer Science with a game development concentration at NC State University in 2012. My house is \"triple\" divided. I have two sisters who attended NC State's rival schools, UNC & Duke. I currently reside in the lovely city of Charlottesville, VA. I also love me some coffee.",
+            "hobbies":"Pen sketching, Singing, Reading",
+            "proud":"Professionally, I'm still honing my skills and still have much to learn, in my opinion. :) Personally, I'm proud of my family and the encouraging support they've always given me."           
+        }
+    }
 ]

@@ -174,7 +174,7 @@ LOGGING = {
 
 import dj_database_url
 # POSTGRESQL VERSION:
-DATABASES['default'] =  dj_database_url.config("HEROKU_POSTGRESQL_TEAL")
+DATABASES['default'] =  dj_database_url.config(default=os.environ["HEROKU_POSTGRESQL_TEAL"])
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
